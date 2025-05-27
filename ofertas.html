@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --azul: #2b67f6;
+        --azul-claro: #e0ebff;
+        --fondo: #f7f9fc;
+        --texto: #1f1f1f;
+        --blanco: #fff;
+        --verde: #00c897;
+        --rojo: #e74c3c;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: var(--fondo);
+        color: var(--texto);
+      }
+
+      .volver-inicio {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .btn-volver {
+        display: inline-block;
+        padding: 12px 30px;
+        background: linear-gradient(135deg, #36d1dc, #5b86e5);
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-volver::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.5s ease;
+      }
+
+      .btn-volver:hover::before {
+        left: 100%;
+      }
+
+      .btn-volver:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #5b86e5;
+      }
+
+      .ofertas {
+        padding: 10px 10px;
+        text-align: center;
+      }
+
+      .titulo-oferta {
+        font-size: 2.5rem;
+        color: var(--azul);
+        margin-bottom: 40px;
+      }
+
+      .descripcion-oferta {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+        animation: fadeIn 1.5s ease-in;
+        margin-bottom: 50px;
+      }
+
+      .contenedor-productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .card {
+        background: var(--blanco);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        transition: all 0.3s ease;
+        transform: scale(1);
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        background-color: var(--azul-claro);
+      }
+
+      .contenido {
+        padding: 20px;
+      }
+
+      .contenido h2 {
+        font-size: 1.2rem;
+        color: var(--azul);
+        margin-bottom: 10px;
+      }
+
+      .contenido p {
+        font-size: 0.95rem;
+        color: #444;
+        margin-bottom: 15px;
+      }
+
+      .precio {
+        margin-bottom: 15px;
+      }
+
+      .precio .original {
+        text-decoration: line-through;
+        color: var(--rojo);
+        margin-right: 10px;
+      }
+
+      .precio .descuento {
+        font-size: 1.2rem;
+        color: var(--verde);
+        font-weight: bold;
+      }
+
+      button {
+        background-color: var(--azul);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #1a47c7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="volver-inicio">
+      <a href="index.html" class="btn-volver"> ⬅ Volver al inicio </a>
+    </div>
+    <section class="ofertas">
+      <h1 class="titulo-oferta">🔥 Ofertas Especiales - Mobile Market 🔥</h1>
+      <p class="descripcion-oferta">
+        ¡Aprovecha nuestras promociones únicas en celulares Samsung! Equipos
+        100% originales, con garantía y descuentos por tiempo limitado. ¡No lo
+        dejes pasar!
+      </p>
+      <div class="contenedor-productos">
+        <!-- Producto 1 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-s928bzkoltp/gallery/pe-galaxy-s24-ultra-sm-s928-sm-s928bzkoltp-thumb-538141217?$1300_1038_PNG$"
+            alt="Galaxy S24 Ultra"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy S24 Ultra</h2>
+            <p>Procesador Snapdragon 8 Gen 3, 12GB RAM, 256GB, Cámara 200MP</p>
+            <div class="precio">
+              <span class="original">$1,299.00</span>
+              <span class="descuento">$1,199.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-a546elvcpea/gallery/pe-galaxy-a54-5g-sm-a546-sm-a546elvcpea-536186558?$1300_1038_PNG$"
+            alt="Galaxy A54 5G"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy A54 5G</h2>
+            <p>128GB, 6GB RAM, Cámara 50MP, Pantalla Super AMOLED</p>
+            <div class="precio">
+              <span class="original">$499.00</span>
+              <span class="descuento">$399.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-f731blvylta/gallery/pe-galaxy-z-flip5-f731-464030-sm-f731blvylta-thumb-537839737?$1300_1038_PNG$"
+            alt="Galaxy Z Flip5"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy Z Flip5</h2>
+            <p>8GB RAM, 256GB, Pantalla Plegable 6.7"</p>
+            <div class="precio">
+              <span class="original">$1,199.00</span>
+              <span class="descuento">$999.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-f731blvylta/gallery/pe-galaxy-z-flip5-f731-464030-sm-f731blvylta-thumb-537839737?$1300_1038_PNG$"
+            alt="Galaxy Z Flip5"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy Z Flip5</h2>
+            <p>8GB RAM, 256GB, Pantalla Plegable 6.7"</p>
+            <div class="precio">
+              <span class="original">$1,199.00</span>
+              <span class="descuento">$999.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-f731blvylta/gallery/pe-galaxy-z-flip5-f731-464030-sm-f731blvylta-thumb-537839737?$1300_1038_PNG$"
+            alt="Galaxy Z Flip5"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy Z Flip5</h2>
+            <p>8GB RAM, 256GB, Pantalla Plegable 6.7"</p>
+            <div class="precio">
+              <span class="original">$1,199.00</span>
+              <span class="descuento">$999.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-f731blvylta/gallery/pe-galaxy-z-flip5-f731-464030-sm-f731blvylta-thumb-537839737?$1300_1038_PNG$"
+            alt="Galaxy Z Flip5"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy Z Flip5</h2>
+            <p>8GB RAM, 256GB, Pantalla Plegable 6.7"</p>
+            <div class="precio">
+              <span class="original">$1,199.00</span>
+              <span class="descuento">$999.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-f731blvylta/gallery/pe-galaxy-z-flip5-f731-464030-sm-f731blvylta-thumb-537839737?$1300_1038_PNG$"
+            alt="Galaxy Z Flip5"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy Z Flip5</h2>
+            <p>8GB RAM, 256GB, Pantalla Plegable 6.7"</p>
+            <div class="precio">
+              <span class="original">$1,199.00</span>
+              <span class="descuento">$999.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+          <img
+            src="https://images.samsung.com/is/image/samsung/p6pim/pe/sm-f731blvylta/gallery/pe-galaxy-z-flip5-f731-464030-sm-f731blvylta-thumb-537839737?$1300_1038_PNG$"
+            alt="Galaxy Z Flip5"
+          />
+          <div class="contenido">
+            <h2>Samsung Galaxy Z Flip5</h2>
+            <p>8GB RAM, 256GB, Pantalla Plegable 6.7"</p>
+            <div class="precio">
+              <span class="original">$1,199.00</span>
+              <span class="descuento">$999.00</span>
+            </div>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

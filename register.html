@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #ff416c, #ff4b2b, #ff6a00);
+      background-size: 600% 600%;
+      animation: backgroundMove 15s ease infinite;
+    }
+
+    @keyframes backgroundMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .register-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 380px;
+      color: #fff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      animation: fadeSlideIn 1s ease-out forwards;
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .register-container h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .register-container p {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #eee;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+
+    .input-group input::placeholder {
+      color: #ddd;
+    }
+
+    .input-group input:focus {
+      background: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
+
+    .btn-register {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-register:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 12px #ff6a00;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #ddd;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 400px) {
+      .register-container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+     <div class="register-container">
+    <h1>Movile Market</h1>
+    <p>Crea tu cuenta para comenzar</p>
+    <form>
+      <div class="input-group">
+        <input type="text" placeholder="Nombre completo" required />
+      </div>
+      <div class="input-group">
+        <input type="email" placeholder="Correo electrónico" required />
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Nombre de usuario" required />
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Contraseña" required />
+      </div>
+      <button type="submit" class="btn-register">Registrarse</button>
+    </form>
+    <div class="footer">
+      ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+    </div>
+</body>
+</html>
